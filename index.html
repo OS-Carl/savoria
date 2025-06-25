@@ -1,0 +1,497 @@
+<!DOCTYPE html>     <!http://localhost/2025/savoria/index.html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savoria Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slideshow.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+       <div class="background-slideshow-container">
+        <div class="slideshow-background-inner">
+            <img src="img/slideshow/carne-asada.jpg" alt="Asado">
+            <img src="img/slideshow/bife_de_chorizo.jpg" alt="Bife">
+            <img src="img/slideshow/mollejas.png" alt="Mollejas">
+            <img src="img/slideshow/vacio.png" alt="Vacio">
+            <img src="img/slideshow/parrilla.jpg" alt="Parrilla">
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Savoria Restaurante</h1>
+                <p>Exquisiteses para paladares demandantes</p>  
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#order">Delivery</a></li>
+                    <li><a href="#reservation">Reservas</a></li>
+                    <li><a href="#reviews">Comentarios</a></li>
+                    <li><a href="#location">Ubicacion</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1></h1>
+            <p>Sabores de otro nivel</p>
+            <div class="hero-buttons">
+                <a href="#order" class="btn primary-btn">Pedidos</a>
+                <a href="#reservation" class="btn secondary-btn">Reservacion de Mesa</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Nuestro Menu</h2>
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="appetizers">Entradas</button>
+                <button class="menu-tab" data-category="main-courses">Platos Principales</button>
+                <button class="menu-tab" data-category="desserts">Postres</button>
+                <button class="menu-tab" data-category="drinks">Bebidas</button>
+            </div>
+
+            <div class="menu-items" id="entradas">
+                <div class="menu-item">
+                    <img src="img/bruschetta.jpg" alt="Bruschetta">
+                    <div class="menu-item-info">
+                        <h3>Bruschetta</h3>
+                        <p>Pan tostado cubierto con tomates, ajo y albahaca fresca.</p>
+                        <span class="price">$8.99</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/calamar.jpg" alt="Rabas">
+                    <div class="menu-item-info">
+                        <h3>Rabas</h3>
+                        <p>Calamares fritos y crujientes, servidos con salsa marinara</p>
+                        <span class="price">$12.99</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/espinacas_alcachofas.jpg" alt="Espinaca y alcachofas">
+                    <div class="menu-item-info">
+                        <h3>Espinacas y Alcachofas</h3>
+                        <p>Dip cremoso de espinacas y alcachofas</p>
+                        <span class="price">$10.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-items" id="main-courses" style="display: none;">
+                <div class="menu-item">
+                    <img src="img/salmon.jpg" alt="Salmon Grillado">
+                    <div class="menu-item-info">
+                        <h3>Salmon Grillado</h3>
+                        <p>Salmon fresco y grillado con crema y hierbas</p>
+                        <span class="price">$24.99</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/bife_de_chorizo.jpg" alt="Bife de Chorizo">
+                    <div class="menu-item-info">
+                        <h3>Bife de Chorizo</h3>
+                        <p>Bife de chorizo a la parrilla</p>
+                        <span class="price">$32.99</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/risotto.jpg" alt="Mushroom Risotto">
+                    <div class="menu-item-info">
+                        <h3>Risotto de champignones</h3>
+                        <p>Arroz con parmesano, crema y champignones</p>
+                        <span class="price">$18.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-items" id="desserts" style="display: none;">
+                <div class="menu-item">
+                    <img src="img/tiramisu.jpg" alt="Tiramisu">
+                    <div class="menu-item-info">
+                        <h3>Tiramisu</h3>
+                        <p>Clasico tiramisu italiano</p>
+                        <span class="price">$8.99</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/volcan.jpg" alt="Volcan de Chocolate">
+                    <div class="menu-item-info">
+                        <h3>Volcan de Cholocate</h3>
+                        <p>Volcan de chocolate caliente con helado de vainilla</p>
+                        <span class="price">$9.99</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/creme_brulee.jpg" alt="Budin">
+                    <div class="menu-item-info">
+                        <h3>Budin</h3>
+                        <p>Budin de pan con caramelo</p>
+                        <span class="price">$7.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-items" id="drinks" style="display: none;">
+                <div class="menu-item">
+                    <img src="img/cocteles.png" alt="Cocteles de autor">
+                    <div class="menu-item-info">
+                        <h3>Cocteles de autor</h3>
+                        <p>Tragos y cocteles de nuestros mixologos</p>
+                        <span class="price">$12.99</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/cervezas.jpeg" alt="Cerveza artesanal">
+                    <div class="menu-item-info">
+                        <h3>Cervezas artesanales</h3>
+                        <p>Cervezas, Ipa, Lager, Stout y Honey</p>
+                        <span class="price">$7.99</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/vino.jpg" alt="Vino">
+                    <div class="menu-item-info">
+                        <h3>Vinos seleccionados</h3>
+                        <p>Nuestra seleccion de vinos finos</p>
+                        <span class="price">$9.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <div class="container">
+            <h2 class="section-title">Pedidos en linea</h2>
+            <p class="section-description">Take away/Delivery</p>
+            
+            <form action="php/ordenar.php" method="post" id="order-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefono:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Dirección:</label>
+                    <textarea id="address" name="address" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Tipo de Pedido:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="delivery" name="order_type" value="delivery" checked>
+                        <label for="delivery">Delivery</label>
+                        <input type="radio" id="pickup" name="order_type" value="pickup">
+                        <label for="pickup">Take away</label>
+                    </div>
+                </div>
+                
+                <h3>Menu</h3>
+                <div class="order-items">
+                    <div class="order-category">
+                        <h4>Entradas</h4>
+                        <div class="order-item">
+                            <label for="bruschetta">Bruschetta ($8.99)</label>
+                            <input type="number" id="bruschetta" name="items[bruschetta]" min="0" value="0">
+                        </div>
+                        <div class="order-item">
+                            <label for="rabas">Rabas ($12.99)</label>
+                            <input type="number" id="rabas" name="items[rabas]" min="0" value="0">
+                        </div>
+                        <div class="order-item">
+                            <label for="dip_de_espinacas_y_alcachofas">Dip de Espinacas y Alcachofas ($10.99)</label>
+                            <input type="number" id="dip_de_espinacas_y_alcachofas" name="items[dip_de_espinacas_y_alcachofas]" min="0" value="0">
+                        </div>
+                    </div>
+                    
+                    <div class="order-category">
+                        <h4>Platos Principales</h4>
+                        <div class="order-item">
+                            <label for="salmon">Salmon Grillado($24.99)</label>
+                            <input type="number" id="salmon" name="items[salmon]" min="0" value="0">
+                        </div>
+                        <div class="order-item">
+                            <label for="filet">Bife de Chorizo ($32.99)</label>
+                            <input type="number" id="bife_de_chorizo" name="items[bife_de_chorizo]" min="0" value="0">
+                        </div>
+                        <div class="order-item">
+                            <label for="risotto">Risotto de Champiñones ($18.99)</label>
+                            <input type="number" id="risotto" name="items[risotto]" min="0" value="0">
+                        </div>
+                    </div>
+                    
+                    <div class="order-category">
+                        <h4>Postres</h4>
+                        <div class="order-item">
+                            <label for="tiramisu">Tiramisu ($8.99)</label>
+                            <input type="number" id="tiramisu" name="items[tiramisu]" min="0" value="0">
+                        </div>
+                        <div class="order-item">
+                            <label for="volcan_de_chocolate">Volcan de Chocolate ($9.99)</label>
+                            <input type="number" id="volcan_de_chocolate" name="items[volcan_de_chocolate]" min="0" value="0">
+                        </div>
+                        <div class="order-item">
+                            <label for="budin">Budin ($7.99)</label>
+                            <input type="number" id="budin" name="items[budin]" min="0" value="0">
+                        </div>
+                    </div>
+                    
+                    <div class="order-category">
+                        <h4>Bebidas</h4>
+                        <div class="order-item">
+                            <label for="cocteles">Cocteles de autor($12.99)</label>
+                            <input type="number" id="cocteles" name="items[cocteles]" min="0" value="0">
+                        </div>
+                        <div class="order-item">
+                            <label for="beer">Cerveza Artesanal ($7.99)</label>
+                            <input type="number" id="cerveza" name="items[cerveza]" min="0" value="0">
+                        </div>
+                        <div class="order-item">
+                            <label for="vino">Vinos Finos ($9.99)</label>
+                            <input type="number" id="vino" name="items[vino]" min="0" value="0">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="special_instructions">Pedidos especiales:</label>
+                    <textarea id="special_instructions" name="special_instructions" rows="3"></textarea>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Resumen de Pedido</h3>
+                    <div id="order-items-summary">
+                        <p>Sin items seleccionados</p>
+                    </div>
+                    <div class="order-total">
+                        <p>Total: <span id="order-total">$0.00</span></p>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn primary-btn">Pedido</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="reservation" class="reservation-section">
+        <div class="container">
+            <h2 class="section-title">Reserva tu mesa</h2>
+            <p class="section-description">Vení a conocernos</p>
+            
+            <form action="reserva.php" method="post" id="reservation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="res_name">Nombre:</label>
+                        <input type="text" id="res_name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="res_email">Email:</label>
+                        <input type="email" id="res_email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="res_phone">Telefono:</label>
+                        <input type="tel" id="res_phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Numero de invitados:</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Seleccione</option>
+                            <option value="1">1 Persona</option>
+                            <option value="2">2 Personas</option>
+                            <option value="3">3 Personas</option>
+                            <option value="4">4 Personas</option>
+                            <option value="5">5 Personas</option>
+                            <option value="6">6 Personas</option>
+                            <option value="7">7 Personas</option>
+                            <option value="8">8 Personas</option>
+                            <option value="9+">9+ Personas</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="res_date">Fecha:</label>
+                        <input type="date" id="res_date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="res_time">Horario</label>
+                        <select id="res_time" name="time" required>
+                            <option value="">Seleccione</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="11:30">11:30 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="12:30">12:30 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="13:30">1:30 PM</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="17:30">5:30 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="18:30">6:30 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="19:30">7:30 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="20:30">8:30 PM</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="res_special_requests">Pedidos especiales:</label>
+                    <textarea id="res_special_requests" name="special_requests" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="btn primary-btn">Reserva</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">Opiniones</h2>
+            <div class="reviews-container">
+                <div class="reviews-list">
+                    <?php include 'display_reviews.php'; ?>
+                </div>
+                
+                <div class="review-form">
+                    <h3>Deja una Reseña</h3>
+                    <form action="opiniones.php" method="post" id="review-form">
+                        <div class="form-group">
+                            <label for="review_name">Nombre:</label>
+                            <input type="text" id="review_name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="review_email">Email:</label>
+                            <input type="email" id="review_email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Calificación:</label>
+                            <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" required>
+                                <label for="star5"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1"><i class="fas fa-star"></i></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="review_comment">Tu Reseña:</label>
+                            <textarea id="review_comment" name="comment" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Enviar Comentario</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="location-section">
+        <div class="container">
+            <h2 class="section-title">Ubicacion</h2>
+            <div class="location-container">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s123%20Example%20St%2C%20New%20York%2C%20NY%2010006%2C%20USA!5e0!3m2!1sen!2sus!4v1652813158709!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact-info">
+                    <h3>Informacion de contacto</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>123 Avenida del Sabor, <br>Gourmet District<br>Savoirville, FD 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefono</h4>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@savoriarestaurant.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horarios</h4>
+                            <p>Lunes - Jueves: 11:00 AM - 10:00 PM<br>
+                            Viernes - Sabados: 11:00 AM - 11:00 PM<br>
+                            Domingos: 10:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Savoria Restaurant</h3>
+                    <p>Sirviendo platos excepcionales en un ambiente cálido y acogedor desde 2010</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Acceso Rapido</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#order">Orden</a></li>
+                        <li><a href="#reservation">Reservas</a></li>
+                        <li><a href="#reviews">Reseñas</a></li>
+                        <li><a href="#location">Ubicación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contactanos</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Avenida del Sabor, Savoirville</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@savoriarestaurant.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Savoria Restaurant. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/slideshow.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>
