@@ -1,0 +1,52 @@
+/* Posiciona el contenedor principal del slideshow fijo en el fondo */
+.background-slideshow-container {
+    position: fixed; /* O 'absolute' si quieres que se desplace con el scroll normal del documento */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Asegura que las imágenes no desborden */
+    z-index: -1; /* Envía el slideshow al fondo, detrás de todo el contenido */
+}
+
+/* Contenedor interno para las imágenes, este es el que se moverá con JS */
+.slideshow-background-inner {
+    position: relative; /* Para que las imágenes internas se posicionen respecto a él */
+    width: 100%;
+    height: 100%;
+    display: flex; /* Para controlar las imágenes como flex items */
+    /* Transición para el movimiento suave del paralaje si lo aplicas en JS */
+    transition: opacity 1.5s ease-in-out;; /* Ajusta la duración y el tipo de easing */
+}
+ 
+
+.slideshow-background-inner img {
+    position: absolute; /* Superpone las imágenes */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    opacity: 0; /* Por defecto, todas las imágenes son invisibles */
+    transition: opacity 1.5s ease-in-out; /* Transición para el fade in/out de las imágenes */
+
+    /* Filtros para tono blanquecino y difuminado */
+    filter: 
+        brightness(0.5)        /* Aumenta el brillo, haciendo que sea más blanquecino */
+        grayscale(0.3)         /* Desatura un poco para un tono menos vibrante, más suave */
+        sepia(0.1)             /* Un toque de sepia puede añadir una calidez blanquecina */
+        contrast(1.1)          /* Reduce el contraste para un look más suave */
+        blur(3px);             /* Aplica un difuminado (ajusta los píxeles para el nivel deseado) */
+    
+    /* Opcional: Para asegurar que los filtros se apliquen sin problemas, aunque ya está en active */
+    /* Estos filtros se aplicarán a todas las imágenes por igual */
+    
+}
+
+.slideshow-background-inner img.active {
+    opacity: 1; /* La imagen con la clase 'active' se hace visible */
+}
+
+/* Opcional: Si no quieres un slideshow que cambia, y solo quieres la primera imagen con paralaje */
+/* Puedes dejar solo la primera imagen visible y eliminar la lógica de cambio de imagen en JS y la clase .active */
+/* .slideshow-background-inner img:first-child { opacity: 1; } */
