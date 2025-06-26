@@ -351,10 +351,36 @@ input, select, textarea {
     background-color: transparent;
 }
 
-/* Seccion de reservas */
+/* Seccion de opiniones */
 .reviews-section {
     padding: 80px 0;
-    background-color: #f9f9f9;
+    /* *** Fondo semitransparente *** */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con 80% de opacidad. AJUSTA ESTE VALOR. */
+    /* Si quieres que se vea aún más el logo, baja la opacidad (ej. 0.6) */
+    /* Si quieres que sea completamente transparente, usa: background-color: transparent; */
+
+    position: relative; 
+    z-index: 1; //
+    overflow: hidden;
+}
+
+/* Logo grande y opaco detrás de la sección de opiniones (el código que ya tienes) */
+.reviews-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajusta el tamaño del logo (ancho) */
+    height: 80%; /* Ajusta el tamaño del logo (altura) */
+    background-image: url('../img/logo.png'); /* Ruta a tu logo de Savoria */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1; /* <--- IMPORTANTE: Bajé la opacidad del logo a 0.1 para que se vea "medio opaco" */
+    /* Si lo dejas en 1.0 como tenías, será 100% opaco y podría competir con el texto */
+    z-index: -1; /* Esto es correcto, lo coloca detrás del contenido de .reviews-section */
+    pointer-events: none;
 }
 
 .reviews-container {
